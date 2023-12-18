@@ -1,8 +1,8 @@
-﻿using AutoMapper;
+﻿using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
+using IyzicoApp.Entity;
 using IyzicoApp.Api.Models;
 using IyzicoApp.Business.Abstract;
-using IyzicoApp.Entity;
-using Microsoft.AspNetCore.Mvc;
 
 namespace IyzicoApp.Api.Controllers
 {
@@ -70,6 +70,16 @@ namespace IyzicoApp.Api.Controllers
             service.Delete(cart);
 
             return Ok("Cart has been deleted successfully.");
+        }
+
+        [HttpGet]
+        [Route("get/cart/{Username}")]
+        public IActionResult GetCart([FromRoute] string Username)
+        {
+            var cart = service.GetCart(Username);
+            if(cart == null) { return NotFound("Cart does not exist."); }
+
+            return Ok(cart);
         }
     }
 }

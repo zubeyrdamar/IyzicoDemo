@@ -36,5 +36,10 @@ namespace IyzicoApp.Business.Concrete
         {
             repository.Delete(cart);
         }
+
+        public Cart GetCart(string Username)
+        {
+            return repository.GetCart(Username);
+        }
     }
 }
