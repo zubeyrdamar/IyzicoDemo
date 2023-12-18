@@ -16,7 +16,7 @@
         public string Note { get; set; }
 
         public Status Status { get; set; }
-        public PaymnetTypes PaymnetType { get; set; }
+        public PaymentTypes PaymentType { get; set; }
 
         public string PaymentId { get; set; }
         public string PaymentToken { get; set; }
@@ -33,7 +33,7 @@
         failed = 3,
     }
 
-    public enum PaymnetTypes
+    public enum PaymentTypes
     {
         card = 0,
         transfer = 1,

@@ -1,7 +1,12 @@
-﻿namespace IyzicoApp.Api.Models
+﻿using IyzicoApp.Entity;
+
+namespace IyzicoApp.Api.Models
 {
     public class OrderDTO
     {
+        public string Username { get; set; }
+        public Cart Cart { get; set; }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
@@ -14,6 +19,6 @@
         public string CardNumber { get; set; }
         public string ExpirationMonth { get; set; }
         public string ExpirationYear { get; set; }
-        public string Cvv { get; set; }
+        public string Cvc { get; set; }
     }
 }

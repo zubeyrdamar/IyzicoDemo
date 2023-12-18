@@ -25,10 +25,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<ICartItemRepository, CartItemRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
 
 builder.Services.AddScoped<ICartService, CartManager>();
 builder.Services.AddScoped<ICartItemService, CartItemManager>();
 builder.Services.AddScoped<IProductService, ProductManager>();
+builder.Services.AddScoped<IOrderService, OrderManager>();
+builder.Services.AddScoped<IOrderItemService, OrderItemManager>();
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
