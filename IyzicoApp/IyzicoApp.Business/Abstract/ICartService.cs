@@ -9,5 +9,7 @@ namespace IyzicoApp.Business.Abstract
         void Create(Cart cart);
         void Update(Cart cart);
         void Delete(Cart cart);
+
+        Cart GetCart(string Username);
     }
 }
