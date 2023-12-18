@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IyzicoApp.DataAccess\IyzicoApp.DataAccess.csproj" />
+    <ProjectReference Include="..\IyzicoApp.Entity\IyzicoApp.Entity.csproj" />
+  </ItemGroup>
+
 </Project>
